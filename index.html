@@ -2,11 +2,32 @@
 <html>
 <head>
     <title>About me</title>
+    <script>
+        // Function to change the background color
+        function changeBackgroundColor() {
+            const colors = ['#ff9999', '#99ff99', '#9999ff', '#ffff99'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+        
+        // Function to display a welcome message
+        function displayWelcomeMessage() {
+            const name = prompt("What's your name?");
+            if (name) {
+                alert(`Welcome to my homepage, ${name}!`);
+            }
+        }
+        
+        // Add event listeners when the page loads
+        window.onload = function() {
+              changeBackgroundColor();
+            displayWelcomeMessage();
+        };
+    </script>
     <style>
         body {
             font-family: Tahoma, sans-serif;
             color: #333;
-            background-color: #808080;
             margin: 0;
             padding: 20px;
         }
@@ -18,7 +39,7 @@
         p {
             line-height: 1.6;
             color: #2f2f2f;
-            border-bottom: 2px solid #ffffff;
+            border-bottom: 2px solid #68b7f3;
         }
     </style>
 </head>
