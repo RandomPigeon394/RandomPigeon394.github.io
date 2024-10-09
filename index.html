@@ -20,12 +20,28 @@
         
         // Add event listeners when the page loads
         window.onload = function() {
-              changeBackgroundColor();
+              changeBackgroundColo();
             displayWelcomeMessage();
         };
         function toggleDarkMode() {
     // add the `dark-mode` class to your `<body>` tag
     document.body.classList.toggle('dark-mode');
+}
+function getFortune() {
+    // create a list of random fortunes
+    const fortunes = [
+        "A pleasant surprise is waiting for you.",
+        "Adventure awaits you around the next corner.",
+        "Your hard work will pay off today.",
+        "You will find a hidden treasure today.",
+        "Your creativity will shine bright today."
+    ];
+    
+    // select a random value from the `fortunes` array
+    const randomIndex = Math.floor(Math.random() * fortunes.length);
+    
+    // post an alert that displays the random fortune
+    alert(fortunes[randomIndex]);
 }
     </script>
     <style>
@@ -46,10 +62,10 @@
             border-bottom: 2px solid #68b7f3;
         }
         /* set the background color to dark gray and text color to white */
-.dark-mode {
+    .dark-mode {
     background-color: #333;
     color: #fff;
-}
+    }
 
     </style>
 </head>
@@ -58,6 +74,7 @@
     <h1>My car</h1>
     <p>This is a simple website to show my car. I drive a 2011 BMW 335i which is modded just a little bit.</p>
     <img src="/335i2.webp">
+    <button onclick="getFortune()">Get Your Fortune</button>
     <p> I just got my car almost 2 months ago and I have loved every second of it. The things I like most is probably how it sounds I like how deep it is and the pops it gives off. Also I like that its pretty fast and looks very good.</p>
     <img src="/my car.jpg">
     <p> This is a picture of how it actually looks.</p>
